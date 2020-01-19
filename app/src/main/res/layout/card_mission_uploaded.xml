@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginLeft="@dimen/space_double"
+    android:layout_marginRight="@dimen/space"
+    android:layout_marginTop="@dimen/space"
+    android:layout_marginBottom="@dimen/space"
+    app:cardCornerRadius="@dimen/space"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/missionUploaded"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/missionStatus"
+            android:textSize="@dimen/font_reg"
+            android:textColor="@color/black"
+            android:padding="@dimen/space"
+            android:layout_below="@+id/missionUploaded"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/imageProgressBar"/>
+
+    </RelativeLayout>
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/missionDate"-->
+<!--        android:textColor="@color/colorPrimary"-->
+<!--        android:textSize="@dimen/font_medium"-->
+<!--        android:maxLines="2"-->
+<!--        android:ellipsize="end"-->
+<!--        android:layout_margin="@dimen/space_double"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/missionStatus"-->
+<!--        android:textColor="@color/colorPrimary"-->
+<!--        android:textSize="@dimen/font_medium"-->
+<!--        android:maxLines="2"-->
+<!--        android:ellipsize="end"-->
+<!--        android:text="@string/sudah_dikonfirmasi"-->
+<!--        android:layout_marginLeft="@dimen/space_double"-->
+<!--        android:layout_marginRight="@dimen/space_double"-->
+<!--        android:layout_marginBottom="@dimen/space_double"/>-->
+
+</androidx.cardview.widget.CardView>

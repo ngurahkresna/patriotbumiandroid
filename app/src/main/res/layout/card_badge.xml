@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="170dp"
+    android:layout_height="150dp"
+    android:background="@drawable/white_card_background"
+    android:gravity="center_vertical"
+    android:layout_margin="@dimen/space">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_trophy"
+        android:padding="@dimen/space"
+        android:id="@+id/badgeImage"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:id="@+id/badgeTitle"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_medium"
+        android:textColor="@color/colorPrimary"
+        android:layout_margin="@dimen/space"/>
+
+</LinearLayout>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activity.ActivityDetail.ActivityDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/patriot_bumi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="@dimen/space_double"
+        android:gravity="start|center_vertical"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:id="@+id/back"
+            android:tint="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aksi"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/space"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/patriot_bumi"
+        android:layout_above="@+id/missionButton"
+        android:id="@+id/activitySwipeRefresh">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_below="@+id/patriot_bumi"
+            android:layout_above="@+id/missionButton">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/space_double">
+
+                        <ImageView
+                            android:id="@+id/missionImage"
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="0.5"
+                            android:src="@drawable/ic_trophy"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1.5"
+                            android:layout_marginLeft="@dimen/space"
+                            android:layout_marginRight="@dimen/space">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/missionTitle"
+                                android:textSize="@dimen/font_medium"
+                                android:textColor="@color/colorPrimary"
+                                android:textStyle="bold"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/space_double"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical">
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/ic_xp"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/missionXP"
+                                        android:textSize="@dimen/font_reg"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_marginLeft="@dimen/space"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical">
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/ic_coin"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/missionCoin"
+                                        android:textSize="@dimen/font_reg"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_marginLeft="@dimen/space"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+        <!--                    <TextView-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="@string/level"-->
+        <!--                        android:textSize="@dimen/font_medium"-->
+        <!--                        android:textColor="@color/colorPrimary"-->
+        <!--                        android:layout_marginTop="@dimen/space"/>-->
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/space"
+                        android:layout_marginBottom="@dimen/space"
+                        android:background="@color/white"
+                        android:padding="@dimen/space_double">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/misi"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/font_medium"
+                            android:textStyle="bold"/>
+
+                        <ProgressBar
+                            android:id="@+id/determinateBar"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/space"
+                            android:layout_height="8dp"
+                            android:progress="0"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/space">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/missionProgress"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/font_medium"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/font_medium"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/missionCount"
+                                android:text="4"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/font_medium"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/space"
+                                android:text="@string/selesai"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/font_medium"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="@dimen/space_double">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tujuan"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/font_medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/missionPurpose"
+                            android:layout_marginTop="@dimen/space"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/font_medium"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/space_double">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/uploaded"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/font_medium"
+                            android:paddingLeft="@dimen/space_double"
+                            android:paddingRight="@dimen/space_double"
+                            android:layout_marginBottom="@dimen/space"
+                            android:textStyle="bold"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/missionPhotoRecyclerView"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/selectedImage"/>
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/uploadedProgressBar"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/missionButton"
+        android:text="@string/lanjutkan_misi"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/space"/>
+
+</RelativeLayout>

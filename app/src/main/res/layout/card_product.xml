@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardProduct"
+    android:layout_marginLeft="@dimen/space_half"
+    android:layout_marginRight="@dimen/space_half"
+    android:padding="@dimen/space"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_card_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/progressBar"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitCenter"
+                android:id="@+id/product_image"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/product_name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/font_small"
+        android:textAlignment="center"
+        android:lineSpacingExtra="@dimen/space_half"
+        android:layout_marginTop="@dimen/space_half"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:id="@+id/product_price"
+            android:textColor="#DF5D59"
+            android:textSize="@dimen/font_small"
+            android:lineSpacingExtra="@dimen/space_half"
+            android:layout_marginTop="@dimen/space_half"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:id="@+id/product_coin"
+            android:textColor="#FBAC3B"
+            android:textSize="@dimen/font_small"
+            android:lineSpacingExtra="@dimen/space_half"
+            android:layout_marginTop="@dimen/space_half"/>
+
+    </LinearLayout>
+
+</LinearLayout>

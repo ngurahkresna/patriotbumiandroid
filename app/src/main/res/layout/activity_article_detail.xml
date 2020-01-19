@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activity.Article.ArticleDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/patriot_bumi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="@dimen/space_double"
+        android:gravity="start|center_vertical"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:id="@+id/back"
+            android:tint="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/article"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="@dimen/space"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/patriot_bumi">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_double"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_article_image"
+                android:layout_margin="@dimen/space"
+                android:id="@+id/article_detail_image"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space"
+                android:layout_marginBottom="@dimen/space"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_medium"
+                android:lineSpacingExtra="@dimen/space_half"
+                android:textStyle="bold"
+                android:id="@+id/article_detail_title"
+                android:text="Article Detail"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_reg"
+                    android:lineSpacingExtra="@dimen/space_half"
+                    android:id="@+id/article_detail_author"
+                    android:layout_weight="1"
+                    android:text="Authored by: Name"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_reg"
+                    android:lineSpacingExtra="@dimen/space_half"
+                    android:id="@+id/article_detail_date"
+                    android:layout_weight="1"
+                    android:text="Uploaded at: Date"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space"
+                android:layout_marginBottom="@dimen/space"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_reg"
+                android:id="@+id/article_detail_content"
+                android:lineSpacingExtra="@dimen/space_half"
+                android:paddingBottom="@dimen/space_double"
+                android:text="Article Content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

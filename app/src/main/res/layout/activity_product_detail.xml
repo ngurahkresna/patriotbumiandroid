@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/colorWhite"
+tools:context=".activity.ProductDetail.ProductDetailActivity">
+
+<LinearLayout
+    android:id="@+id/patriot_bumi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="@dimen/space_double"
+    android:gravity="start|center_vertical"
+    android:layout_alignParentTop="true">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:id="@+id/back"
+        android:tint="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|end">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toko"
+            android:textSize="@dimen/font_big"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    android:layout_below="@+id/patriot_bumi"
+    android:layout_above="@+id/missionButton">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:padding="@dimen/space_double">
+
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="0.5"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_trophy"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1.5"
+                android:layout_marginLeft="@dimen/space"
+                android:layout_marginRight="@dimen/space">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/productTitle"
+                    android:textSize="@dimen/font_big"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/space_double"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_saldo"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/productPrice"
+                            android:textSize="@dimen/font_medium"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginLeft="@dimen/space"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_coin"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/productCoin"
+                            android:text="500"
+                            android:textSize="@dimen/font_medium"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginLeft="@dimen/space"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="@string/level"-->
+                <!--                        android:textSize="@dimen/font_medium"-->
+                <!--                        android:textColor="@color/colorPrimary"-->
+                <!--                        android:layout_marginTop="@dimen/space"/>-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/space"
+            android:padding="@dimen/space_double">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/deskripsi"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_big"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/productDescription"
+                android:layout_marginTop="@dimen/space"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_medium"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/productButton"
+    android:text="@string/beli"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/button_background"
+    android:textColor="@color/white"
+    android:textStyle="bold"
+    android:layout_margin="@dimen/space"/>
+
+</RelativeLayout>

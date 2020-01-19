@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Home.PreHomeFragment"
+    android:background="@color/colorWhite"
+    android:layout_marginBottom="50dp">
+
+    <LinearLayout
+        android:id="@+id/patriot_bumi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="@dimen/space_double"
+        android:gravity="start|center_vertical"
+        android:layout_alignParentTop="true">
+
+<!--        <ImageView-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            app:srcCompat="@drawable/logo"/>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patriot_bumi"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/swipeRefresh"
+        android:layout_below="@+id/patriot_bumi">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/patriot_bumi"
+        android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--HOME BEFORE-->
+                <LinearLayout
+                    android:id="@+id/home_before"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/space_double"
+                    android:background="@drawable/login_card_background"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="@dimen/space_double">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_tooltip"
+                            android:tint="@color/black"
+                            android:layout_marginRight="@dimen/space"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/login_command"
+                            android:textSize="@dimen/font_medium"
+                            android:lineSpacingExtra="@dimen/space_half"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="@dimen/button_width"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginBottom="@dimen/space_double"
+                        android:layout_marginRight="@dimen/space_double"
+                        android:layout_gravity="end"
+                        android:id="@+id/login_button"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/font_medium"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/button_background"
+                        android:text="@string/login"/>
+
+                </LinearLayout>
+                <!--HOME BEFORE-->
+
+                <!--ARTICLE-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/space_double"
+                    android:layout_marginRight="@dimen/space_double">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/space">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/article"
+                            android:textSize="@dimen/font_medium"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"/>
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+                            android:tint="@color/colorPrimary"
+                            android:id="@+id/article_more"
+                            android:rotation="180"
+                            android:layout_marginLeft="@dimen/space_double"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/white_card_background">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_alignParentTop="true">
+
+                            <androidx.viewpager.widget.ViewPager
+                                android:id="@+id/home_article"
+                                android:layout_width="match_parent"
+                                android:layout_height="160dp"/>
+
+                            <com.google.android.material.tabs.TabLayout
+                                android:id="@+id/home_tablayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_marginLeft="@dimen/space_double"
+                                android:layout_marginBottom="@dimen/space"
+                                app:tabBackground="@drawable/circle_indicator_state"
+                                app:tabPaddingStart="@dimen/space_half"
+                                app:tabPaddingEnd="@dimen/space_half"
+                                app:tabIndicatorHeight="0dp" />
+
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:id="@+id/articleProgressBar"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <!--ARTICLE-->
+
+                <!--ACTIVITY-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/space_double">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/daftar_tugas"
+                        android:textSize="@dimen/font_medium"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/space"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/daftar_tugas_recyclerview"
+                            android:layout_alignParentTop="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <ProgressBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:id="@+id/activityProgressBar"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <!--ACTIVITY-->
+
+                <!--DONATION-->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/space_double"
+                    android:layout_marginRight="@dimen/space_double"
+                    android:layout_marginBottom="@dimen/space_double">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/donasi"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/font_medium"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginBottom="@dimen/space"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/donasi_recyclerview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--DONATION-->
+
+                <!--PRODUCT-->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/space_double"
+                    android:layout_marginRight="@dimen/space_double"
+                    android:layout_marginBottom="@dimen/space_double">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/produk_unggulan"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/font_medium"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginBottom="@dimen/space"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/produk_unggulan_recyclerview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--PRODUCT-->
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

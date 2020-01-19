@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@drawable/white_card_background"
+    android:layout_margin="@dimen/space"
+    android:weightSum="2">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/background_profile_image"
+        android:id="@+id/rank_image"
+        android:src="@drawable/user"
+        android:padding="@dimen/space_half"
+        android:layout_margin="@dimen/space_double"/>
+
+    <LinearLayout
+        android:layout_weight="1.8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fikri Miftah"
+            android:textColor="@color/black"
+            android:id="@+id/rank_name"
+            android:layout_marginTop="@dimen/space"
+            android:textSize="@dimen/font_medium"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/space"
+            android:layout_marginBottom="@dimen/space">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rank_xp"
+                android:textSize="@dimen/font_medium"
+                android:text="500"
+                android:layout_marginRight="@dimen/space"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/xp"
+                android:textSize="@dimen/font_small"
+                android:textColor="@color/grey_500"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_weight="0.2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="#1"
+        android:id="@+id/rank_number"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_medium"/>
+
+</LinearLayout>
